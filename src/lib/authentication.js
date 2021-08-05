@@ -4,7 +4,17 @@ export const loginPersistence = () => {
   firebase.auth().setPersistence(firebase.auth.Auth.Persistence.SESSION);
 };
 
-export async function loginWithGoogleAccount() {
+export const getNewUserData = (userData, userName) => {
+  const usersCollection = firebase.firestore().collection('users');
+  const user = {
+    id: userData.user.uid,
+    name: userName,
+    email: userData.user.email,
+  };
+  usersCollection.add(user);
+};
+
+export const loginWithGoogleAccount = async () => {
   const provider = new firebase.auth.GoogleAuthProvider();
   await firebase.auth().signInWithPopup(provider)
     .then(() => {
@@ -22,7 +32,7 @@ export async function loginWithGoogleAccount() {
           break;
       }
     });
-}
+};
 
 export const loginWithEmailAndPassword = (userEmail, userPassword) => {
   firebase.auth().signInWithEmailAndPassword(userEmail, userPassword)
@@ -67,7 +77,8 @@ export const createAccountWithEmailAndPassword = (
     errorField.innerHTML = 'As senhas não estão iguais, tente novamente.';
   } else {
     firebase.auth().createUserWithEmailAndPassword(userEmail, userPassword)
-      .then(() => {
+      .then((userData) => {
+        getNewUserData(userData, userName);
         onNavigate('/home');
       })
       .catch((error) => {
@@ -96,13 +107,3 @@ export const createAccountWithEmailAndPassword = (
       });
   }
 };
-
-// export const verifyUser = () => {
-//   firebase.auth().onAuthStateChanged((user) => {
-//     if (user) {
-//       const userId = user.uid;
-//       onNavigate('/home');
-//       console.log(userId);
-//     }
-//   });
-// }
