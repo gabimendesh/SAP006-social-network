@@ -13,14 +13,19 @@ body {
 
 :root {
   --background-color: #131140;
-  --button-color: #F28705;
-  --title-color: #FAFAFA;
-  --text-box: #F2D479;
-  --text-color-: #040911;
+  --yellow-color: #F28705;
+  --white-color: #FAFAFA;
+  --bege-color: #F2D479;
+  --black-color: #040911;
+  --rose-color: #F2A477;
 }
 
 .header {
   margin: 1.25rem;
+}
+
+.container {
+  position: fixed;
 }
 
 .container,
@@ -39,11 +44,11 @@ body {
   margin-top: 2rem;
   font-size: 2rem;
   text-align: center ;
-  color: var(--title-color);
+  color: var(--white-color);
 }
 
 .subtitle, .option, .sign-up-text {
-  color: var(--title-color);
+  color: var(--white-color);
   text-align: center;
 }
 
@@ -54,6 +59,7 @@ body {
 .subtitle {
   margin-bottom: 2rem;
   font-size: 1rem;
+  width: 330px;
 }
 
 .input-field,
@@ -62,10 +68,10 @@ body {
 #user-email,
 #new-password,
 #confirm-password {
-  width: 12rem;
-  height: 2.5rem;
-  margin: 0.35rem;
-  background: var(--text-box);
+  width: 16rem;
+  height: 3rem;
+  margin: 0.40rem;
+  background: var(--bege-color);
   text-decoration: none;
   border: none;
   border-radius: 0.25rem;
@@ -86,26 +92,60 @@ body {
 
 #btn-signUp {
   width: 9rem;
-  padding: 0.75rem;
   font-size: 1.125rem;
-  padding: 10px;
+  padding: 14px;
 }
 
 #btn-signUp, #login-btn {
-  background: var(--button-color);
+  background: var(--yellow-color);
 }
 
 #login-btn {
   font-size: 1.125rem;
+  padding: 14px;
 }
 
 .button-google {
   text-align: center;
-  font-size: 0.80rem;
-  padding: 3px 6px;
+  font-size: 1rem;
+  padding: 5px 12px;
+}
+.google-icon {
+  margin-top: 2px;
 }
 
 #google-btn {
-  background: var(--title-color);
+  background: var(--white-color);
   margin-bottom: 3rem;
+}
+
+.container::before {
+  content: '';
+  height: 90px;
+  width: 80px;
+  background: var(--rose-color);
+  border-radius: 50%;
+  position: absolute;
+  top: -4.2%;
+  left: 80%;
+  z-index: 0;
+}
+
+.container::after {
+  content: '';
+  height: 70px;
+  width: 60px;
+  background: var(--bege-color);
+  border-radius: 50%;
+  position: absolute;
+  top: -4.2%;
+  left: 87%;
+  z-index: 0;
+}
+
+body {
+  background-image: url(./img/Nomads\ Dog.png);
+  background-position: 11rem 32rem;
+  background-size: 210px;
+  background-repeat: no-repeat;
 }
