@@ -112,3 +112,4 @@ export const logOut = () => {
   firebase.auth().signOut();
   onNavigate('/');
 };
+

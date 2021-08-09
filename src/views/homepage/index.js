@@ -51,11 +51,11 @@ export const home = () => {
 
   const addPosts = (post) => {
     const postTemplate = `
-    <section id="${post.id}" class="post">
-      <img src="https://img2.gratispng.com/20180331/eow/kisspng-computer-icons-user-clip-art-user-5abf13db298934.2968784715224718991702.jpg" alt="user" class="user-photo">
-      ${post.data().text}
-    </section>
-    `;
+   <section id="${post.id}" class="post">
+     <img src="https://img2.gratispng.com/20180331/eow/kisspng-computer-icons-user-clip-art-user-5abf13db298934.2968784715224718991702.jpg" alt="user" class="user-photo">
+     ${post.data().text}
+   </section>
+   `;
     container.querySelector('#postsList').innerHTML += postTemplate;
   };
 
