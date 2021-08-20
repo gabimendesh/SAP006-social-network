@@ -3,6 +3,7 @@ import {
   currentUser,
   loadPosts,
   logOut,
+  likedPost,
 } from '../../services/index.js';
 import { addPost } from '../../components/post.js';
 
@@ -24,7 +25,7 @@ export const home = () => {
       <button type="submit" class="send-post ">Postar</button>
     </form>
     <p class="loading-posts"></p>
-    <ul id="postsList"></ul>
+    <ul id="postsList" data-postsList></ul>
     <div class= "footer-img">
  `;
 
@@ -49,6 +50,7 @@ export const home = () => {
           data: () => ({
             userName: currentUser().displayName,
             text: textPost,
+            like: [],
             createdAt: date.toLocaleString(),
           }),
         };
@@ -65,5 +67,63 @@ export const home = () => {
     logOut();
   });
 
+
+  /*container.querySelector('[data-postsList]')
+ //for( likes of postLike){
+
+   .addEventListener("click", (e) => {
+     //console.log("cliquei aqui");
+     const target = e.target;
+     console.log(target.dataset.like);
+     if (target.dataset.like == '') {
+       likedPost().then((sucessReturn) => {
+         //console.log("Hello")
+         console.log(sucessReturn);
+         target.classList.add('liked');
+       })
+         .catch((error) => {
+           console.log(error)
+         });
+     };
+
+   });*/
+
+
+
+  container.querySelector('[data-postsList]')
+    //for( likes of postLike){
+
+    .addEventListener("click", (e) => {
+      //console.log("cliquei aqui");
+      const target = e.target;
+      console.log(target.dataset.like);
+      if (target.dataset.like == '') {
+        const getPost = target.parentNode.parentNode.parentNode.parentNode;
+        const id = getPost.getAttribute('data-id');
+        //const userId = currentUser().uid
+        likedPost(id)
+        // .then((sucessReturn) => {
+        //console.log(userId)
+        //console.log(sucessReturn);
+        target.classList.add('liked');
+        // })
+      } else { (target.dataset.like != '') }
+
+      // .catch((error) => {
+      // console.log(error);
+      //})
+
+    });
+
+  // }*/
+
+
+
+
   return container;
 };
+
+
+
+
+

@@ -171,6 +171,26 @@ textarea {
   padding: 3px;
 }
 
+.btn-like {
+  margin: 1rem;
+  margin-bottom: 1rem;
+  cursor: pointer;
+  border: none;
+  outline: none;
+  background: var(--rose-light);
+  font-size: 13px;
+}  
+
+.liked {
+  background: rgb(204, 19, 19);
+  /*position: absolute;
+  transform: translate(-50%,-50%);
+  padding: 10px;
+  box-shadow: 0 2px 8px rgba(0,0,0,.1);
+  border-radius: 50px;*/
+}
+
+
 @media(min-width: 1200px) {
 
   textarea {

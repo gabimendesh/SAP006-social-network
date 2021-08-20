@@ -76,7 +76,7 @@ export const createPost = (textPost) => {
     userName: user.displayName,
     userEmail: user.email,
     createdAt: date.toLocaleString('pt-BR'),
-    likes: 0,
+    likes: [],
     comments: [],
   };
 
@@ -87,3 +87,89 @@ export const createPost = (textPost) => {
 };
 
 export const currentUser = () => firebase.auth().currentUser;
+
+
+
+    /*export const likedPost = () =>
+  firebase
+    .firestore()
+    .collection('posts').add({
+      likes: true,
+    })
+    .then(() => {
+      return Promise.resolve(true);
+    })
+    .catch((error) => {
+      return Promise.reject(error);
+    })*/
+
+    export const likesPost = (postId) => {
+      const getPostsToLike = firebase
+        .firestore()
+        .collection('posts').doc(postId);
+      if (getUserIdOnLocalStorage()) {
+        getPostsToLike.update({
+          likes: firebase.firestore.FieldValue.arrayUnion(getUserIdOnLocalStorage()),
+        });
+      }
+      // if (getUserIdOnLocalStorage()) {
+      //   getPostsToLike.update({
+      //     regions: firebase.firestore.FieldValue.arrayRemove(getUserIdOnLocalStorage()),
+      //   });
+      // }
+    };
+  
+
+    export const likedPost = (userId) => {
+      const likeArray= firebase.firestore().collection('posts').doc().get().then(() => {
+        console.log(likeArray)
+        likeArray.update({
+          likes: firebase.firestore.FieldValue.arrayUnion(userId),
+        })
+
+      })
+
+    }
+  
+
+
+    /*export const likedPost = (userId) => {
+      const likeArray= firebase.firestore().collection('posts').doc().get().then((post) => {
+
+     
+        //const quantLike = post.data().likes;
+         // if (quantLikes.includes () === -1) {
+            likeArray.update({
+              likes: firebase.firestore.FieldValue.arrayUnion(userId),
+            })
+     
+         /* } else {
+            likeArray.update({
+              likes: firebase.firestore.FieldValue.arrayRemove(userId)
+            })*/
+     
+          
+
+        
+  
+  
+    
+
+
+      
+       // return likeArray.update({
+         // likes: userId
+
+        //
+    
+
+     // }))
+
+    
+
+   
+    //  })
+    // .catch((error) => {
+     //   console.error("Error", error);
+     // })
+ // }

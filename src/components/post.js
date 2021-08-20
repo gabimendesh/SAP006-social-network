@@ -1,7 +1,7 @@
 export const addPost = (post) => {
   const postDiv = document.createElement('div');
-  postDiv.setAttribute('id', post.id);
-  const postTemplate = `
+  postDiv.setAttribute('data-id', post.id);
+  const postTemplate = ` 
     <div id="${post.data().createdAt}" class="post">
       <div class="user-perfil">
         <img src="./img/Perfil.png" alt="user-photo" class="user-photo">
@@ -10,8 +10,18 @@ export const addPost = (post) => {
       <article class="post-field">
         <p class="user-post">${post.data().text}</p>
       </article>
-    </div>
+      <div class="like-post" data-like">
+      <button class="btn-like data-like= ${post.id} id="btn-like" >
+        <img src="./img/heart.png" alt="like-icon" data-like class="like-icon "width=15px">
+        <span id="likes" data-like> ${post.data().likes.length}</span>
+      </button>
+      </div>
+      </div>
   `;
   postDiv.innerHTML = postTemplate;
+
+
   return postDiv;
 };
+
+
