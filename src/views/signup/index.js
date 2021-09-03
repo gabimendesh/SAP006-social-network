@@ -1,4 +1,9 @@
-import { createAccountWithEmailAndPassword, loginWithGoogleAccount } from '../../services/index.js';
+import {
+  createAccountWithEmailAndPassword,
+  loginWithGoogleAccount,
+  userUpdateProfile,
+  saveUserIdOnLocalStorage,
+} from '../../services/index.js';
 import { onNavigate } from '../../navigate.js';
 
 export const signup = () => {
@@ -52,11 +57,13 @@ export const signup = () => {
         errorField.innerHTML = 'As senhas não estão iguais, tente novamente.';
       } else {
         createAccountWithEmailAndPassword(
-          userName,
           userEmail,
           userPassword,
           confirmPassword,
-        )
+        ).then(() => onNavigate('/'))
+          .then(() => {
+            userUpdateProfile(userName);
+          })
           .catch((error) => {
             errorField = document.getElementById('error-sign-up-message');
             let errorMessage = error.message;
@@ -88,6 +95,10 @@ export const signup = () => {
     .addEventListener('click', (event) => {
       event.preventDefault();
       loginWithGoogleAccount()
+        .then((doc) => {
+          saveUserIdOnLocalStorage(doc.user.uid);
+          onNavigate('/home');
+        })
         .catch((error) => {
           const errorField = document.getElementById('error-sign-up-message');
           let errorMessage = error.message;

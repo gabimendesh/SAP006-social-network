@@ -17,11 +17,6 @@
   flex-direction: column;
 }
   
-.form-register {
-  display: contents;
-
-}
-  
 .logo-signUp {
   text-align:right;
   color: var(--white-color);
@@ -49,26 +44,6 @@
 
 .login-text {
   font-size: 0.80rem;
-}
-  
-.input-field,
-.button,
-#user-name,
-#user-email,
-#new-password,
-#confirm-password {
-  width: 15rem;
-  height: 2.813rem;
-  font-family: inherit;
-  background: var(--bege-color);
-  margin: 0.40rem;
-  text-decoration: none;
-  border: none;
-  border-radius: 0.25rem;
-  display: flex;
-  align-content: center;
-  justify-content: center;
-  padding: 5px;
 }
 
 .input-field {
@@ -161,7 +136,6 @@
   padding: 5px;
   width: 15rem;
 }
-
 
 @media screen and (min-width: 640px) {
 

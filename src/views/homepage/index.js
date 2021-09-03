@@ -4,9 +4,12 @@ import {
   loadPosts,
   logOut,
   deletePost,
-
+  likesPost,
+  editPost,
+  clearLocalStorage,
 } from '../../services/index.js';
 import { addPost } from '../../components/post.js';
+import { onNavigate } from '../../navigate.js';
 
 export const home = () => {
   const container = document.createElement('div');
@@ -39,6 +42,8 @@ export const home = () => {
     });
   });
 
+  loadPosts();
+
   container.querySelector('#postForm')
     .addEventListener('submit', (event) => {
       event.preventDefault();
@@ -52,7 +57,8 @@ export const home = () => {
             userName: user.displayName,
             userId: user.uid,
             text: textPost,
-            createdAt: date.toLocaleString(),
+            createdAt: date.toLocaleString('en-US'),
+            likes: [],
           }),
         };
         const newPostElement = addPost(createdPost);
@@ -64,18 +70,81 @@ export const home = () => {
   container.querySelector('.loading-posts').innerHTML = 'Carregando...';
   container.querySelector('#logout').addEventListener('click', (e) => {
     e.preventDefault();
-    logOut();
+    logOut()
+      .then(clearLocalStorage())
+      .then(onNavigate('/'));
   });
 
   const postsList = container.querySelector('[data-postsList]');
   postsList.addEventListener('click', (e) => {
     e.preventDefault();
     const target = e.target;
+
     if (target.dataset.delete === '') {
-      const getPost = target.parentNode.parentNode.parentNode.parentNode;
+      const modal = document.getElementById('myModal');
+      modal.style.display = 'block';
+      const span = document.getElementsByClassName('close-button')[0];
+      span.addEventListener('click', () => {
+        e.preventDefault();
+        modal.style.display = 'none';
+      });
+    }
+
+    if (target.dataset.deletepost === '') {
+      const getPost = target.parentNode
+        .parentNode.parentNode.parentNode.parentNode.parentNode;
       const id = getPost.getAttribute('data-id');
       deletePost(id)
         .then(getPost.remove());
+    }
+
+    if (target.dataset.like === '' && !target.classList.contains('fas')) {
+      const getPost = target.parentNode.parentNode.parentNode.parentNode.parentNode;
+      const id = getPost.getAttribute('data-id');
+      const numberLikes = container.querySelector(`[data-like="${id}"]`);
+      e.target.classList.add('fas');
+      likesPost(id);
+      const quantLikes = Number(numberLikes.textContent) + 1;
+      numberLikes.innerHTML = quantLikes;
+    } else if (target.dataset.like === '' && target.classList.contains('fas')) {
+      const getPost = target.parentNode.parentNode.parentNode.parentNode.parentNode;
+      const id = getPost.getAttribute('data-id');
+      const numberLikes = container.querySelector(`[data-like="${id}"]`);
+      e.target.classList.remove('fas');
+      const quantLikes = Number(numberLikes.textContent) - 1;
+      numberLikes.innerHTML = quantLikes;
+      likesPost(id);
+    }
+
+    if (target.dataset.edit === '') {
+      const getPost = target.parentNode.parentNode.parentNode.parentNode.parentNode;
+      const id = getPost.getAttribute('data-id');
+      const confirmEdit = container.querySelector(`[data-edit="${id}"]`);
+      confirmEdit.style.display = 'flex';
+      const editArea = container.querySelector(`[data-post="${id}"]`);
+      const postField = container.querySelector(`[data-post="${id}"]`);
+      postField.setAttribute('id', 'edit-area');
+      editArea.setAttribute('contentEditable', 'true');
+      const editButton = target;
+      editButton.style.display = 'none';
+
+      confirmEdit.addEventListener('click', () => {
+        editArea.removeAttribute('contentEditable');
+        postField.removeAttribute('id');
+        const newText = editArea.textContent;
+        editPost(newText, id)
+          .then(() => {
+            confirmEdit.style.display = 'none';
+            editButton.style.display = 'block';
+          }).catch(() => {
+            const modal = document.querySelector('.modal');
+            const close = document.querySelector('.close');
+            modal.style.display = 'block';
+            close.onclick = () => {
+              modal.style.display = 'none';
+            };
+          });
+      });
     }
   });
 

@@ -1,4 +1,4 @@
-import { loginWithEmailAndPassword, loginWithGoogleAccount } from '../../services/index.js';
+import { loginWithEmailAndPassword, loginWithGoogleAccount, saveUserIdOnLocalStorage } from '../../services/index.js';
 import { onNavigate } from '../../navigate.js';
 
 export const login = () => {
@@ -41,6 +41,10 @@ export const login = () => {
       const inputEmail = document.getElementById('user-email');
       const inputPassword = document.getElementById('user-password');
       loginWithEmailAndPassword(inputEmail.value, inputPassword.value)
+        .then((doc) => {
+          saveUserIdOnLocalStorage(doc.user.uid);
+          onNavigate('/home');
+        })
         .catch((error) => {
           const errorField = document.getElementById('error-message');
           let errorMessage = error.message;
@@ -70,6 +74,10 @@ export const login = () => {
     .addEventListener('click', (event) => {
       event.preventDefault();
       loginWithGoogleAccount()
+        .then((doc) => {
+          saveUserIdOnLocalStorage(doc.user.uid);
+          onNavigate('/home');
+        })
         .catch((error) => {
           const errorField = document.getElementById('error-message');
           let errorMessage = error.message;

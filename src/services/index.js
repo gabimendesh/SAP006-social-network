@@ -1,79 +1,39 @@
 import { onNavigate } from '../navigate.js';
+import { getFirebase } from './firebase.js';
 
-// export const loginPersistence = () => {
-//   firebase.auth().setPersistence(firebase.auth.Auth.Persistence.SESSION);
-// };
-
-export const getNewUserData = (userData, userName) => {
-  const usersCollection = firebase.firestore().collection('users');
-  const user = {
-    id: userData.uid,
-    name: userName,
-    email: userData.email,
-  };
-  usersCollection.add(user);
-};
-
-const saveUserIdOnLocalStorage = (uid) => {
+export const saveUserIdOnLocalStorage = (uid) => {
   localStorage.uid = uid;
 };
 
 export const getUserIdOnLocalStorage = () => localStorage.uid;
 
-const clearLocalStorage = () => localStorage.clear();
+export const clearLocalStorage = () => localStorage.clear();
 
-export const loginWithGoogleAccount = async () => {
+export const loginWithGoogleAccount = () => {
   const provider = new firebase.auth.GoogleAuthProvider();
-  await firebase.auth().signInWithPopup(provider)
-    .then((user) => {
-      const userName = user.user.displayName;
-      firebase.firestore().collection('users')
-        .where('id', '==', user.user.uid).get()
-        .then((firestoreUser) => {
-          if (firestoreUser.docs.length === 0) {
-            getNewUserData(user.user, userName);
-          }
-          saveUserIdOnLocalStorage(user.user.uid);
-          onNavigate('/home');
-        });
-    });
+  return getFirebase().auth().signInWithPopup(provider);
 };
 
 export const loginWithEmailAndPassword = (
   userEmail,
   userPassword,
-) => firebase.auth()
-  .signInWithEmailAndPassword(userEmail, userPassword)
-  .then((doc) => {
-    saveUserIdOnLocalStorage(doc.user.uid);
-    onNavigate('/home');
-  });
+) => getFirebase().auth()
+  .signInWithEmailAndPassword(userEmail, userPassword);
 
 export const createAccountWithEmailAndPassword = (
-  userName,
   userEmail,
   userPassword,
-) => firebase.auth().createUserWithEmailAndPassword(userEmail, userPassword)
-  .then((userData) => {
-    getNewUserData(userData.user, userName);
-  })
-  .then(() => onNavigate('/'))
-  .then(() => {
-    const user = firebase.auth().currentUser;
-    user.updateProfile({
-      displayName: userName,
-    });
-    saveUserIdOnLocalStorage(user.uid);
+) => getFirebase().auth().createUserWithEmailAndPassword(userEmail, userPassword);
+
+export const userUpdateProfile = (userName) => getFirebase().auth().currentUser
+  .updateProfile({
+    displayName: userName,
   });
 
-export const logOut = () => {
-  firebase.auth().signOut()
-    .then(clearLocalStorage())
-    .then(onNavigate('/'));
-};
+export const logOut = () => getFirebase().auth().signOut();
 
 export const loadPosts = () => {
-  const postsCollection = firebase
+  const postsCollection = getFirebase()
     .firestore()
     .collection('posts');
   return postsCollection.orderBy('createdAt', 'desc').get();
@@ -81,25 +41,62 @@ export const loadPosts = () => {
 
 export const createPost = (textPost) => {
   const date = new Date();
-  const user = firebase.auth().currentUser;
+  const user = getFirebase().auth().currentUser;
   const post = {
     text: textPost,
     userId: user.uid,
     userName: user.displayName,
     userEmail: user.email,
-    createdAt: date.toLocaleString('pt-BR'),
+    createdAt: date.toLocaleString('en-US'),
     likes: [],
     comments: [],
   };
 
-  const postsCollection = firebase
+  const postsCollection = getFirebase()
     .firestore()
     .collection('posts');
   return postsCollection.add(post);
 };
 
-export const currentUser = () => firebase.auth().currentUser;
+export const currentUser = () => getFirebase().auth().currentUser;
 
-export const deletePost = (id) => firebase
+export const editPost = (newText, postId) => getFirebase()
+  .firestore().collection('posts').doc(postId)
+  .update({
+    text: newText,
+  });
+
+getFirebase().auth().onAuthStateChanged(() => {
+  if (!getFirebase().auth().currentUser) {
+    onNavigate('/');
+  }
+});
+
+export const deletePost = (id) => getFirebase()
   .firestore()
-  .collection('posts').doc(id).delete();
+  .collection('posts').doc(id)
+  .delete();
+
+export const likesPost = (postId) => {
+  getFirebase()
+    .firestore()
+    .collection('posts').doc(postId)
+    .get()
+    .then((post) => {
+      const arrayLikes = post.data().likes;
+      const likesInPost = getFirebase()
+        .firestore()
+        .collection('posts').doc(postId);
+      if (getUserIdOnLocalStorage()) {
+        likesInPost.update({
+
+          likes: getFirebase().firestore.FieldValue.arrayUnion(getUserIdOnLocalStorage()),
+        });
+      }
+      if (arrayLikes.includes(getUserIdOnLocalStorage())) {
+        likesInPost.update({
+          likes: getFirebase().firestore.FieldValue.arrayRemove(getUserIdOnLocalStorage()),
+        });
+      }
+    });
+};
