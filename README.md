@@ -14,13 +14,11 @@
 
 ## 1. Projeto
 
-<br>
-
  # Social Network - Plush 
 
-
-![](https://ik.imagekit.io/vd8jwzhk56v/logo_f9chXuVes.png?updatedAt=1631039101469)
-
+<h3 align="center">
+    <img alt="Logo" title="#logo" width="300px" src="https://ik.imagekit.io/vd8jwzhk56v/logo_f9chXuVes.png?updatedAt=1631039101469)">
+</h3>
 
 A adoção de pets teve um crescimento durante a pandemia, conforme pesquisas, nos levando a escolha  do tema do nosso projeto, onde criamos Plush, nome escolhido, pensando na fofura dos pets. 
 
@@ -46,12 +44,13 @@ A página inicial, foi criada para que fique as postagem, com a opção de edita
 
 Protótipo de baixa fidelidade
 
-![]()
+![](https://ik.imagekit.io/q8vyo7feaitz/signinb.png?updatedAt=1631055336230&tr=w-365,h-627,fo-custom,cm-extract)
+![](https://ik.imagekit.io/q8vyo7feaitz/signupb.png?updatedAt=1631055324520&tr=w-373,h-623,fo-custom,cm-extract)
 
 ---
 As paletas de cores foi escolhida seguindo a primeira pesquisa de que realizamos.
 
-![]()
+![](https://ik.imagekit.io/q8vyo7feaitz/color_1M-2hdt81.jpeg?updatedAt=1631055578194)
 
 ---
 Protótipo de alta fidelidade
