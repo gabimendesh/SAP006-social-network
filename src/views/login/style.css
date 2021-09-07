@@ -10,7 +10,6 @@
 }
 
 .logo {
-  margin-top: 4rem;
   text-align:right;
   color: var(--white-color);
 }
@@ -45,6 +44,7 @@
   height: 2.813rem;
   margin: 0.40rem;
   background: var(--bege-color);
+  font-family: inherit;
   text-decoration: none;
   border: none;
   border-radius: 0.375rem;
@@ -158,7 +158,7 @@
   .dog-login {
     width: 200px;
   }  
-      
+
   }
   
 @media screen and (min-width: 1024px) {
