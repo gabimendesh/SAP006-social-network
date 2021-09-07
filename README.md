@@ -56,7 +56,8 @@ As paletas de cores foi escolhida seguindo a primeira pesquisa de que realizamos
 ---
 Protótipo de alta fidelidade
 
-![]()
+![](https://ik.imagekit.io/q8vyo7feaitz/signin_AtSKMj7jV.png?updatedAt=1631054986207)
+![](https://ik.imagekit.io/q8vyo7feaitz/signup_K8WBrkd0mO.png?updatedAt=1631054986057)
 
 
 ## 4. Histórias de usuário
