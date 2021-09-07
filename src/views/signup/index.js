@@ -14,7 +14,6 @@ export const signup = () => {
       <div class="img-triangle">
         <img class="header-triangle" src="../img/triangulosUp.png" alt="triangle" width="100"/>
       </div>
-      <h1 class="logo-signUp">Plush</h1>
     </div>
     <form class="form-register">
       <p class="create-account">Crie sua conta</p>

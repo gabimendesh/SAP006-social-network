@@ -9,9 +9,8 @@ export const login = () => {
       <div class="img-ball">
         <img class="ball" src="../img/bolinhas.png" alt="balls" width="100" />
       </div>
-      <h1 class="logo">Plush</h1>
+      <img class="logo" src="../img/logo.png" alt="logo"/>
     </div>
-    <p class="subtitle">Uma rede para tutores e amantes de animais.</p>
     <form class="form-login">
       <p id="error-message" class="error-message"></p>
       <input type="email" placeholder="Email" class="input-field" id="user-email" autocomplete="off" />

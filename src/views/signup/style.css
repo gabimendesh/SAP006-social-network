@@ -17,11 +17,11 @@
   flex-direction: column;
 }
   
-.logo-signUp {
+/*.logo-signUp {
   text-align:right;
   color: var(--white-color);
-  margin-top: 1rem;
-}
+  margin-top: 4rem;
+}*/
 
 .option-register,
 .login-text {
@@ -34,6 +34,7 @@
   color: var(--white-color);
   text-align: center;
   margin: 1rem;
+  margin-top: 6rem;  
 }
   
 .option-register {
@@ -158,6 +159,7 @@
   .header-triangle{
     width: 150px;
   }
+
 }
     
 @media screen and (min-width: 1024px) {
