@@ -125,8 +125,13 @@
   float: right;
 }
 
+.footer-img {
+  height: fit-content;
+  position: static;
+}
+
 .dog-login {
-  position: absolute;
+  position: fixed;
   right: 0;
   width: 118px;
   padding: 0;
