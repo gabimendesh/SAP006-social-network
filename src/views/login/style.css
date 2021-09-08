@@ -111,19 +111,19 @@
 
 .ball {
   position: absolute;
-  right: 0px;
+  right: 0;
   width: 65px;
-  padding: 0px;
+  padding: 0;
   float: right;
 }
 
 .dog-login {
   position: absolute;
-  right: 0px;
-  width: 130px;
-  padding: 0px;
+  right: 0;
+  width: 118px;
+  padding: 0;
   float: right;
-  bottom: 0px;
+  bottom: 0;
 }
 
  .triangle{
@@ -135,11 +135,11 @@
 
   .triangle{
     position: absolute;
-    left: 0px;
+    left: 0;
     width: 130px;
-    padding: 0px;
+    padding: 0;
     float: left;
-    bottom: 0px;
+    bottom: 0;
     display: flex;
   }
 
