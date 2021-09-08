@@ -13,9 +13,6 @@ body {
   background-color: var(--background-color);
   height: 100vh;
   font-family: "Poppins", sans-serif;
-  /* background-position: 11rem 32rem;
-  background-size: 210px;
-  background-repeat: no-repeat; */
 }
 
 :root {

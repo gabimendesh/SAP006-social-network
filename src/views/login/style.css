@@ -125,18 +125,13 @@
   float: right;
 }
 
-.footer-img {
-  height: fit-content;
-  position: static;
-}
-
 .dog-login {
-  position: fixed;
-  right: 0;
-  width: 118px;
+  position: relative;
+  width: 120px;
   padding: 0;
   float: right;
-  bottom: 0;
+  bottom: 41px;
+  left: 100px;
 }
 
  .triangle{
