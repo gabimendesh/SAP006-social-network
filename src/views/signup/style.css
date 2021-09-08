@@ -101,13 +101,14 @@
   min-width: 50px;
 }
   
-.dog-signUp {
-  right: 0px;
+.dog-login {
   width: 130px;
-  padding: 0px;
-  float: right;
-  bottom: 0px;
-  position: absolute;
+}
+
+.footer-img {
+  display: flex;
+  justify-content: flex-end;
+  width: 100%;
 }
 
 .header-triangle{
