@@ -100,12 +100,8 @@
   cursor: pointer;
   min-width: 50px;
 }
-  
-.dog-login {
-  width: 130px;
-}
 
-.footer-img {
+.footer {
   display: flex;
   justify-content: flex-end;
   width: 100%;

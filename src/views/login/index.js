@@ -28,8 +28,8 @@ export const login = () => {
     <p class="sign-up-text">Ainda não é membro?</p>
     <button class="button" id="btn-signUp">Cadastrar-se</button>
     <div class="footer-img">
-      <img class="dog-login" src="../img/dog.png" alt="dog" width="100px" />
-      <img class="triangle" src="../img/Triangulos.png" alt="triangle" width="100" />
+      <img class="triangle-login" src="../img/Triangulos.png" alt="triangle"  width="100px"/>
+      <img class="dog-login" src="../img/dog.png" alt="dog"/>
     </div>
 `;
   container.innerHTML = template;
