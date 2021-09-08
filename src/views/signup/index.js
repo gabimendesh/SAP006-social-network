@@ -37,7 +37,8 @@ export const signup = () => {
     </button>
     <p class="login-text">Já tem uma conta?</p>
     <button class="button" id="btn-login">Entrar</button <div class="footer-img">
-    <img class="dog-signUp" src="../img/dog.png" alt="dog" width="100px" />
+    <div class="footer-img">
+      <img class="dog-login" src="../img/dog.png" alt="dog" />
     </div>
   `;
   container.innerHTML = template;

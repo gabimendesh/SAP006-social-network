@@ -9,14 +9,12 @@
   color: brown;
 }
 
-
 .logo {
   margin-top: 2rem;
   text-align:right;
   color: var(--white-color);
 }
 
-.subtitle,
 .option,
 .sign-up-text {
   color: var(--white-color);
@@ -29,13 +27,6 @@
 
 .sign-up-text{
   font-size: 0.80rem;
-}
-
-.subtitle {
-  margin-bottom: 2rem;
-  margin-top: 2rem;
-  font-size: 1rem;
-  width: 290px;
 }
 
 .input-field,
@@ -53,11 +44,12 @@
   align-content: center;
   justify-content: center;
   padding: 10px;
+  font-family: inherit;
 }
 
 .input-field {
-  font-size: 1rem;
-  text-align: center;
+    font-size: 1rem;
+    text-align: center;
 }
 
 #login-btn {
@@ -102,7 +94,7 @@
   margin-bottom: 10px;
   position: absolute;
   margin-left: 65px;
-  padding: 21px;
+  padding: 17px;
 }
 
 .fa-eye {
@@ -119,7 +111,7 @@
 }
 
 .dog-login {
-  width: 118px;
+  width: 130px;
   position: relative;
 }
 

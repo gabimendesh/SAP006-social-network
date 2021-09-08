@@ -16,12 +16,6 @@
   align-items: center;
   flex-direction: column;
 }
-  
-/*.logo-signUp {
-  text-align:right;
-  color: var(--white-color);
-  margin-top: 4rem;
-}*/
 
 .option-register,
 .login-text {
