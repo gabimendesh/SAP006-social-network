@@ -10,29 +10,23 @@
 - [6. Objetivos de aprendizagem](#6-objetivos-de-aprendizagem)
 - [7. Autoras](#7-Autoras)
 
----
-
 ## 1. Projeto
 
  # Social Network - Plush 
 
 <h3 align="center">
-    <img alt="Logo" title="#logo" width="300px" src="https://ik.imagekit.io/vd8jwzhk56v/logo_f9chXuVes.png?updatedAt=1631039101469)">
+    <img alt="Logo" title="#logo" src="https://ik.imagekit.io/vd8jwzhk56v/logo_f9chXuVes.png?updatedAt=1631039101469)">
 </h3>
 
-A adoção de pets teve um crescimento durante a pandemia, conforme pesquisas, nos levando a escolha  do tema do nosso projeto, onde criamos Plush, nome escolhido, pensando na fofura dos pets. 
-
----
+A adoção de pets teve um crescimento durante a pandemia, conforme pesquisas, o que nos levou a escolher o tema para  o nosso projeto. Criamos Plush, nome escolhido, pensando na fofura dos pets. 
 
 ## 2. Resumo do projeto
 
-Plush é uma rede voltada aos amantes e tutores de animais, para que os usuários possam compartilhar dicas, histórias, adoções, memes de pets e ajuda em casos de emergências.
+Plush é uma rede voltada aos amantes e tutores de animais, para que os usuários possam compartilhar dicas, histórias, adoções, memes de pets e ajuda em casos de emergências, um lugar de apoio e trocas de experiências.
 
-Plush permite ao usuário criar uma conta de acesso e logar-se com ela, se preferir é possivel entrar com a conta Google. Permite também criar, editar, deletar e dar likes nas publicações.
+Plush permite ao usuário criar uma conta de acesso e logar-se com ela, se preferir é possivel entrar com a conta do Google. Permite também criar, editar, deletar e dar likes nas publicações.
 
 Acesse nosso projeto [clicando aqui](https://pt.wikipedia.org/Plush)
-
----
 
 ## 3. Desenho de interface do usuário
 
@@ -40,24 +34,30 @@ Pensando em um layout intuitivo, que leva a a página de login, apenas com as in
 
 A página inicial, foi criada para que fique as postagem, com a opção de editar e excluir a postagem e também pode visualizar as postagem de outros usuários podendo interagir com o like e deslike
 
----
+#### Protótipo de baixa fidelidade:
 
-Protótipo de baixa fidelidade
+<h3 align="center">
+   <img alt="image login" title=""
+        src="https://ik.imagekit.io/q8vyo7feaitz/signinb.png?updatedAt=1631055336230&tr=w-365,h-627,fo-custom,cm-extract">
+   <img alt="image sign up" title=""
+        src="https://ik.imagekit.io/q8vyo7feaitz/signupb.png?updatedAt=1631055401591&tr=w-365,h-627,fo-custom,cm-extract">
+</h3>
 
-![](https://ik.imagekit.io/q8vyo7feaitz/signinb.png?updatedAt=1631055336230&tr=w-365,h-627,fo-custom,cm-extract)
-![](https://ik.imagekit.io/q8vyo7feaitz/signupb.png?updatedAt=1631055324520&tr=w-373,h-623,fo-custom,cm-extract)
+#### As paletas de cores foi escolhida seguindo a primeira pesquisa de que realizamos:
 
----
-As paletas de cores foi escolhida seguindo a primeira pesquisa de que realizamos.
+<h3 align="center">
+   <img alt="image login" title="" width="500px"
+        src="https://ik.imagekit.io/q8vyo7feaitz/color_1M-2hdt81.jpeg?updatedAt=1631055578194">
+</h3>
 
-![](https://ik.imagekit.io/q8vyo7feaitz/color_1M-2hdt81.jpeg?updatedAt=1631055578194)
+#### Protótipo de alta fidelidade:
 
----
-Protótipo de alta fidelidade
-
-![](https://ik.imagekit.io/q8vyo7feaitz/signin_AtSKMj7jV.png?updatedAt=1631054986207)
-![](https://ik.imagekit.io/q8vyo7feaitz/signup_K8WBrkd0mO.png?updatedAt=1631054986057)
-
+<h3 align="center">
+   <img alt="image login" title="" 
+        src="https://ik.imagekit.io/q8vyo7feaitz/signin_AtSKMj7jV.png?updatedAt=1631054986207">
+   <img alt="image sign up" title=""
+        src="https://ik.imagekit.io/q8vyo7feaitz/signup_K8WBrkd0mO.png?updatedAt=1631054986057">
+</h3>
 
 ## 4. Histórias de usuário
 
@@ -70,9 +70,6 @@ Antes de iniciar o desenvolvimento da aplicação realizamos uma pesquisa de usu
 - Nossa paleta de cores foi selecionada por meio da votação dos usuários nesta pesquisa.
 - Entre as sugestões dadas pelos usuários, prevalecem temas como adestramento, dicas de alimentação saudável para pets, cuidados com a saúde, adoção, divulgação de ONGs, anúncios de locais que vendem produtos mais baratos, locais próximos de doação de animais, além da implementação de funcionalidades como perfis para os pets e a busca de postagens de animais por tags. 
 
-
----
-
 ## 5. Testes de usabilidade
 
 ### Teste de Usabilidade 1
@@ -84,14 +81,12 @@ Ao implementar as funcionalidades iniciais de login e cadastro na plataforma fiz
 - A maioria dos usuários conseguiu acessar outras páginas do fluxo e foram direcionados para as páginas corretamente.
 - A interface ficou simples e minimalista para a maioria dos usuários.
 
-![](https://ik.imagekit.io/vd8jwzhk56v/Teste_usabilidade_mzdvaWFAx.png?updatedAt=1631042711322)
-
-
-<br>
+<h3 align="center">
+   <img alt="graph" title=""
+        src="https://ik.imagekit.io/vd8jwzhk56v/Teste_usabilidade_mzdvaWFAx.png?updatedAt=1631042711322">
+</h3>
 
 ### Teste de Usabilidade 2
-
-<br>
 
 Ao implementar o feed de posts e estilizar toda a aplicação, realizamos mais um teste de usabilidade para reunir informações a respeito do resultado geral.
 
@@ -101,9 +96,10 @@ Ao implementar o feed de posts e estilizar toda a aplicação, realizamos mais u
 - A interface é intuitiva e as cores da paleta foram bem aplicadas na interface.
 - Entre as sugestões dadas pelos usuários estão: implementar a funcionalidade de postar imagens, incluir um aviso de que o cadastro foi feito com sucesso, incluir tema claro/escuro alternando as cores da aplicação, melhorar o posicionamento do botão de postar e implementar a personalização do perfil.
 
-![](https://ik.imagekit.io/vd8jwzhk56v/teste_de_usabilidade_CiLPlpEJf.png?updatedAt=1631042481495)
-
-
+<h3 align="center">
+   <img alt="graph"
+        src="https://ik.imagekit.io/vd8jwzhk56v/teste_de_usabilidade_CiLPlpEJf.png?updatedAt=1631042481495">
+</h3>
 
 ---
 ## 6. Objetivos de aprendizagem
@@ -143,6 +139,7 @@ Boas práticas de programação
 * Linting
 
 ---
+[gif](https://ik.imagekit.io/q8vyo7feaitz/gifvideo.gif?updatedAt=1631059280527)
 
 ## 7. Autoras
 
