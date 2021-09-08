@@ -11,9 +11,6 @@ const mockLogOut = jest.fn();
 
 jest.mock('../src/services/firebase.js', () => ({
   getFirebase: jest.fn(() => ({
-    firestore: jest.fn(() => ({
-      collection: jest.fn(),
-    })),
     auth: jest.fn(() => ({
       signInWithEmailAndPassword: mockLoginWithEmailAndPassword,
       createUserWithEmailAndPassword: mockCreateAccountWithEmailAndPassword,
