@@ -143,7 +143,7 @@ Boas práticas de programação
 ## Desenvolvedoras
 
 <h3 align="center">
-    Feito com 💛 por 
+    Feito com 💛 por:
  <p></p>
  <p>
   <a href="https://www.linkedin.com/in/ericaserpa/" target="_blank">Érica Serpa:</a> <a href="https://github.com/EricaSerpa" target="_blank">Github</a>
