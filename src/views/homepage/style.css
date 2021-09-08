@@ -400,10 +400,6 @@ textarea {
   .send-post {
     bottom: 30px;
   }
-
-  /* .post-form {
-    padding: 1%;
-  } */
   
   .post-form, .post {
     grid-column: 2;
