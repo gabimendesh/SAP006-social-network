@@ -1,26 +1,23 @@
-
+<h3 align="center">
+    <img alt="Logo" title="#logo" src="https://ik.imagekit.io/q8vyo7feaitz/logo_0c3TubiGO.png?updatedAt=1631061741226&tr=w-1000,h-588,fo-custom,cm-extract" width="500px">
+</h3>
 
 ## Índice
+- [Projeto](#Projeto)
+- [Definição de produto](#resumo-do-projeto)
+- [Layout](#interface)
+- [História de usuário](#user-history)
+- [Testes de usabilidade](#tests)
+- [Objetivos de aprendizagem](#learn)
 
-- [1. Projeto](#1-projeto)
-- [2. Resumo do projeto](#2-resumo-do-projeto)
-- [3. Desenho de interface do usuário](#3-Desenho-de-interface-do-usuário)
-- [4. Histórias de usuário](#4-Histórias-de-usuário)
-- [5. Testes de usabilidade](#5-Testes-de-usabilidade)
-- [6. Objetivos de aprendizagem](#6-objetivos-de-aprendizagem)
-- [7. Autoras](#7-Autoras)
-
-## 1. Projeto
-
+<a id="Projeto"></a>
+## Projeto
  # Social Network - Plush 
-
-<h3 align="center">
-    <img alt="Logo" title="#logo" src="https://ik.imagekit.io/vd8jwzhk56v/logo_f9chXuVes.png?updatedAt=1631039101469)">
-</h3>
 
 A adoção de pets teve um crescimento durante a pandemia, conforme pesquisas, o que nos levou a escolher o tema para  o nosso projeto. Criamos Plush, nome escolhido, pensando na fofura dos pets. 
 
-## 2. Resumo do projeto
+<a id="resumo-do-projeto"></a>
+## Definição de produto
 
 Plush é uma rede voltada aos amantes e tutores de animais, para que os usuários possam compartilhar dicas, histórias, adoções, memes de pets e ajuda em casos de emergências, um lugar de apoio e trocas de experiências.
 
@@ -28,11 +25,12 @@ Plush permite ao usuário criar uma conta de acesso e logar-se com ela, se prefe
 
 Acesse nosso projeto [clicando aqui](https://pt.wikipedia.org/Plush)
 
-## 3. Desenho de interface do usuário
+<a id="interface"></a>
+## Desenho de interface do usuário
 
-Pensando em um layout intuitivo, que leva a a página de login, apenas com as informaçoes de email e senha, caso não tenha conta ou não queira logar com a conta Google, leva a página de cadastro onde encontra-se os campos de nome, email e senha.
+Pensando em um layout intuitivo, o usário é direcionado a página de login, e, é possível ser um novo membro apenas com seus dados de email e senha cadastrados na rede, ou de maneira mais prática, existe a possibilidade do usuário entrar com sua conta do Google.
 
-A página inicial, foi criada para que fique as postagem, com a opção de editar e excluir a postagem e também pode visualizar as postagem de outros usuários podendo interagir com o like e deslike
+A página inicial, foi criada para que fique as publicações dos usuários já membros da rede, podendo interagir com likes e, com a opção de editar ou excluir a própria publicação.
 
 #### Protótipo de baixa fidelidade:
 
@@ -59,7 +57,8 @@ A página inicial, foi criada para que fique as postagem, com a opção de edita
         src="https://ik.imagekit.io/q8vyo7feaitz/signup_K8WBrkd0mO.png?updatedAt=1631054986057">
 </h3>
 
-## 4. Histórias de usuário
+<a id="user-history"></a>
+## Histórias de usuário
 
 Antes de iniciar o desenvolvimento da aplicação realizamos uma pesquisa de usuário e constatamos que:
 
@@ -70,7 +69,8 @@ Antes de iniciar o desenvolvimento da aplicação realizamos uma pesquisa de usu
 - Nossa paleta de cores foi selecionada por meio da votação dos usuários nesta pesquisa.
 - Entre as sugestões dadas pelos usuários, prevalecem temas como adestramento, dicas de alimentação saudável para pets, cuidados com a saúde, adoção, divulgação de ONGs, anúncios de locais que vendem produtos mais baratos, locais próximos de doação de animais, além da implementação de funcionalidades como perfis para os pets e a busca de postagens de animais por tags. 
 
-## 5. Testes de usabilidade
+<a id="tests"></a>
+## Testes de usabilidade
 
 ### Teste de Usabilidade 1
 
@@ -101,12 +101,13 @@ Ao implementar o feed de posts e estilizar toda a aplicação, realizamos mais u
         src="https://ik.imagekit.io/vd8jwzhk56v/teste_de_usabilidade_CiLPlpEJf.png?updatedAt=1631042481495">
 </h3>
 
----
-## 6. Objetivos de aprendizagem
+
+<a id="learn"></a>
+## Objetivos de aprendizagem
 
 HTML e CSS
-* HTML semântico
-* CSS flexbox
+* HTML5 semântico
+* CSS3 flexbox
 
 DOM e Web APIs
 * Manipulação do DOM
@@ -125,32 +126,34 @@ Firebase
 * Uso de onSnapshot | onAuthStateChanged
 
 Testing
+* Jest
 * Teste unitários
 * Testes assíncronos
 * Mocking
-
-Git e Github
-* Colaboração pelo Github
-* Organização pelo Github
 
 Boas práticas de programação
 * Modularização
 * Nomenclatura / Semântica
 * Linting
 
----
-[gif](https://ik.imagekit.io/q8vyo7feaitz/gifvideo.gif?updatedAt=1631059280527)
+<h3 align="center">
+   <img alt="gif" src="https://ik.imagekit.io/q8vyo7feaitz/gifvideo.gif?updatedAt=1631059280527">
+</h3>
 
-## 7. Autoras
+## Desenvolvedoras
 
-- Érica Serpa 
-
-[@EricaSerpa](https://github.com/EricaSerpa) - [Linkedin](linkedin.com/in/ericaserpa)
-
-- Gabrielly Mendes
-
-[@gabimendesh](github.com/gabimendesh) - [Linkedin](linkedin.com/in/gabriellymendes)
-
-- Vanessa Lima
-
-[@vanessa-cl](https://github.com/vanessa-cl) - [Linkedin](linkedin.com/in/vanessa-lima20-)
+<h3 align="center">
+    Feito com 💛 by 
+ <p></p>
+ <p>
+  <a href="https://www.linkedin.com/in/ericaserpa/" target="_blank">Érica Serpa:</a> <a href="https://github.com/EricaSerpa" target="_blank">Github</a>
+ </p>
+ <p>
+  <a href="https://www.linkedin.com/in/gabriellymendes/" target="_blank">Gabrielly Mendes:</a> <a href="https://github.com/gabimendesh" target="_blank">Github</a>
+   <a href="" target="_blank"></a>
+ </p>
+ <p>
+  <a href="https://github.com/vanessa-cl" target="_blank">Vanessa Lima:</a> <a href="https://github.com/vanessa-cl" target="_blank">Github</a>
+    <a href="" target="_blank"></a>
+ </p>
+</h3>
