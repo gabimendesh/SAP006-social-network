@@ -1,4 +1,4 @@
-import { onNavigate } from '../navigate.js';
+// import { onNavigate } from '../navigate.js';
 import { getFirebase } from './firebase.js';
 
 export const saveUserIdOnLocalStorage = (uid) => {
@@ -32,12 +32,10 @@ export const userUpdateProfile = (userName) => getFirebase().auth().currentUser
 
 export const logOut = () => getFirebase().auth().signOut();
 
-export const loadPosts = () => {
-  const postsCollection = getFirebase()
-    .firestore()
-    .collection('posts');
-  return postsCollection.orderBy('createdAt', 'desc').get();
-};
+export const loadPosts = () => getFirebase()
+  .firestore()
+  .collection('posts').orderBy('createdAt', 'desc')
+  .get();
 
 export const createPost = (textPost) => {
   const date = new Date();
@@ -66,11 +64,11 @@ export const editPost = (newText, postId) => getFirebase()
     text: newText,
   });
 
-getFirebase().auth().onAuthStateChanged(() => {
-  if (!getFirebase().auth().currentUser) {
-    onNavigate('/');
-  }
-});
+// getFirebase().auth().onAuthStateChanged(() => {
+//   if (!getFirebase().auth().currentUser) {
+//     onNavigate('/');
+//   }
+// });
 
 export const deletePost = (id) => getFirebase()
   .firestore()
