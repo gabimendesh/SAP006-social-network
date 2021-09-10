@@ -23,7 +23,7 @@ Plush é uma rede voltada aos amantes e tutores de animais, para que os usuário
 
 Plush permite ao usuário criar uma conta de acesso e logar-se com ela, se preferir é possivel entrar com a conta do Google. Permite também criar, editar, deletar e dar likes nas publicações.
 
-Acesse nosso projeto [clicando aqui](https://pt.wikipedia.org/Plush)
+Acesse nosso projeto [clicando aqui](https://social-network-bfa4d.web.app/)
 
 <a id="interface"></a>
 ## Desenho de interface do usuário
