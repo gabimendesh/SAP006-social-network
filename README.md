@@ -103,38 +103,14 @@ Ao implementar o feed de posts e estilizar toda a aplicação, realizamos mais u
 
 
 <a id="learn"></a>
-## Objetivos de aprendizagem
+## Tecnologias
 
-HTML e CSS
-* HTML5 semântico
-* CSS3 flexbox
-
-DOM e Web APIs
-* Manipulação do DOM
-* History API
-* localStorage
-
-Javascript
-* Uso de callbacks
-* Consumo de Promises
-* Uso de ES modules (import | export)
-
-Firebase
-* Firestore
-* Firebase Auth
-* Firebase security rules
-* Uso de onSnapshot | onAuthStateChanged
-
-Testing
-* Jest
-* Teste unitários
-* Testes assíncronos
-* Mocking
-
-Boas práticas de programação
-* Modularização
-* Nomenclatura / Semântica
-* Linting
+- JavaScript
+- Jest 
+- Eslint
+- Git e Github 
+- Firebase
+- Figma
 
 <h3 align="center">
    <img alt="gif" src="https://ik.imagekit.io/q8vyo7feaitz/gifvideo.gif?updatedAt=1631059280527">
