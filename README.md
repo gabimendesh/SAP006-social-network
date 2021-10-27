@@ -41,13 +41,6 @@ A página inicial, foi criada para que fique as publicações dos usuários já 
         src="https://ik.imagekit.io/q8vyo7feaitz/signupb.png?updatedAt=1631055401591&tr=w-365,h-627,fo-custom,cm-extract">
 </h3>
 
-#### As paletas de cores foi escolhida seguindo a primeira pesquisa de que realizamos:
-
-<h3 align="center">
-   <img alt="image login" title="" width="500px"
-        src="https://ik.imagekit.io/q8vyo7feaitz/color_1M-2hdt81.jpeg?updatedAt=1631055578194">
-</h3>
-
 #### Protótipo de alta fidelidade:
 
 <h3 align="center">
@@ -56,6 +49,8 @@ A página inicial, foi criada para que fique as publicações dos usuários já 
    <img alt="image sign up" title=""
         src="https://ik.imagekit.io/q8vyo7feaitz/signup_K8WBrkd0mO.png?updatedAt=1631054986057">
 </h3>
+
+Figma: https://www.figma.com/file/RuIkGSRS8Dpxc3APd4IpLM/Social-Network?node-id=0%3A1
 
 <a id="user-history"></a>
 ## Histórias de usuário
