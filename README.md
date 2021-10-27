@@ -50,7 +50,7 @@ A página inicial, foi criada para que fique as publicações dos usuários já 
         src="https://ik.imagekit.io/q8vyo7feaitz/signup_K8WBrkd0mO.png?updatedAt=1631054986057">
 </h3>
 
-Figma: https://www.figma.com/file/RuIkGSRS8Dpxc3APd4IpLM/Social-Network?node-id=0%3A1
+Acesse nosso projeto no figma [clicando aqui](https://www.figma.com/file/RuIkGSRS8Dpxc3APd4IpLM/Social-Network?node-id=0%3A1)
 
 <a id="user-history"></a>
 ## Histórias de usuário
